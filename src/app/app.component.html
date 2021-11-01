@@ -16,27 +16,33 @@
     </mat-select>
   </mat-form-field>
 </div>
-<div>
-  <div *ngFor="let item of [].constructor(this.personNumber); let i = index">
-    <mat-radio-group>
-      <mat-radio-button value="mr">Mr</mat-radio-button>
-      <mat-radio-button value="mrs">Mrs</mat-radio-button>
-      <mat-radio-button value="miss">Miss</mat-radio-button>
-      <mat-radio-button value="ms">Ms</mat-radio-button>
-    </mat-radio-group>
-    <mat-form-field appearance="fill" color='primary' class='selectors'>
-      <mat-label>First Name</mat-label>
-      <input matInput placeholder="First Name" value="">
-    </mat-form-field>
-    <mat-form-field appearance="fill" color='primary' class='selectors'>
-      <mat-label>Last Name</mat-label>
-      <input matInput placeholder="Last Name" value="">
-    </mat-form-field>
-    <mat-form-field appearance="fill" color='primary' class='selectors'>
-      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
+<hr>
+<div class='centertop'>
+  <div *ngFor="let item of [].constructor(this.personNumber); let i = index" class='center'>
+    <div>
+      <p>Person {{i+1}}</p>
+      <mat-radio-group>
+        <mat-radio-button value="mr">Mr</mat-radio-button>
+        <mat-radio-button value="mrs">Mrs</mat-radio-button>
+        <mat-radio-button value="miss">Miss</mat-radio-button>
+        <mat-radio-button value="ms">Ms</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div>
+      <mat-form-field appearance="fill" color='primary' class='selectors'>
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="First Name" value="">
+      </mat-form-field>
+      <mat-form-field appearance="fill" color='primary' class='selectors'>
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Last Name" value="">
+      </mat-form-field>
+      <mat-form-field appearance="fill" color='primary' class='selectors'>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
   </div>
 </div>
 <div>
@@ -97,19 +103,27 @@
     </mat-form-field>
   </div>
 </div>
-<div *ngFor="let item of [].constructor(this.companyNumber); let i = index">
-  <mat-radio-group>
-    <mat-radio-button value="mr">Mr</mat-radio-button>
-    <mat-radio-button value="mrs">Mrs</mat-radio-button>
-    <mat-radio-button value="miss">Miss</mat-radio-button>
-    <mat-radio-button value="ms">Ms</mat-radio-button>
-  </mat-radio-group>
-  <mat-form-field appearance="fill" color='primary' class='selectors'>
-    <mat-label>First Name</mat-label>
-    <input matInput placeholder="First Name" value="">
-  </mat-form-field>
-  <mat-form-field appearance="fill" color='primary' class='selectors'>
-    <mat-label>Last Name</mat-label>
-    <input matInput placeholder="Last Name" value="">
-  </mat-form-field>
+<hr>
+<div class='centertop' *ngIf="this.account==='corporate'">
+  <div *ngFor="let item of [].constructor(this.companyNumber); let i = index" class='center'>
+    <div>
+      <p>Company Officer {{i+1}}</p>
+      <mat-radio-group>
+        <mat-radio-button value="mr">Mr</mat-radio-button>
+        <mat-radio-button value="mrs">Mrs</mat-radio-button>
+        <mat-radio-button value="miss">Miss</mat-radio-button>
+        <mat-radio-button value="ms">Ms</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div>
+      <mat-form-field appearance="fill" color='primary' class='selectors'>
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="First Name" value="">
+      </mat-form-field>
+      <mat-form-field appearance="fill" color='primary' class='selectors'>
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Last Name" value="">
+      </mat-form-field>
+    </div>
+  </div>
 </div>

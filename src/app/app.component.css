@@ -8,3 +8,15 @@
   float: left;
   margin: 5px;
 }
+
+.center {
+  align-items: center;
+  padding: 70px 0;
+  border: 1px solid #5c34eb;
+}
+
+.centretop {
+  align-items: center;
+  display: flex;
+}
+
